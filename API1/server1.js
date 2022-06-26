@@ -13,18 +13,14 @@ app.get('/', (req, res)=>{
     res.send('Server start')
 })
 
-app.get('/info', (req, res)=>{
-    res.send('Salvador de Jesus Lopez Bautista - 201314059')
-})
-
 /********************* ENDPOINT TYPE POST *********************/
-app.post('/resta', (req, res)=>{
+app.post('/suma', (req, res)=>{
     const n1 = Number(req.query.num1)
     const n2 = Number(req.query.num2)
     
-    const result = n1 - n2
+    const result = n1 + n2
     console.log(result)
-    res.send(`El resultado de ${n1} - ${n2} es ${result}`)
+    res.send(`El resultado de ${n1} + ${n2} es ${result}`)
 })
 
 /**************************************************************/
